@@ -20,7 +20,7 @@ public record Nip(String value, LocalDate dateOfBirth, LocalDate dateOfStart, Ge
 		var number = value.substring(15);
 		return new Nip(value,
 		               LocalDate.parse(dateOfBirth, FORMATTER),
-		               dateOfStart.endsWith("21") ? null : LocalDate.parse(dateOfStart, FORMATTER),
+		               dateOfStart.endsWith("21") ? null : LocalDate.parse(dateOfStart + "01", FORMATTER),
 		               Gender.fromValue(gender),
 		               Short.valueOf(number)
 		);
