@@ -9,14 +9,20 @@ import lombok.experimental.Accessors;
 @Accessors(fluent = true)
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public enum Gender {
-	LAKI_LAKI(1, "Laki-laki"),
-	PEREMPUAN(2, "Perempuan");
+	LAKI_LAKI((byte) 1, "Laki-laki"),
+	PEREMPUAN((byte) 2, "Perempuan");
 
-	private final Integer value;
+	private final Byte value;
 
 	private final String title;
 
 	public static Gender fromValue(Integer value) {
+		if (value == null) return null;
+		if (value < -127 || value > 127) return null;
+		return fromValue(value.byteValue());
+	}
+
+	public static Gender fromValue(Byte value) {
 		if (value != null) for (var e : values()) if (e.value().equals(value)) return e;
 		return null;
 	}
