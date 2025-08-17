@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 public interface LogsUser extends LogsEntity<DataUser, String> {
 
-	String TABLE_NAME = "data_user";
+	String TABLE_NAME = "logs_user";
 
 	@Override
 	Long id();
