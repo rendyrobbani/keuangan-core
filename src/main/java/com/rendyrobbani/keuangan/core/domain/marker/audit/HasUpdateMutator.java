@@ -1,0 +1,9 @@
+package com.rendyrobbani.keuangan.core.domain.marker.audit;
+
+import java.time.LocalDateTime;
+
+public interface HasUpdateMutator {
+
+	void update(LocalDateTime updatedAt, String updatedBy);
+
+}

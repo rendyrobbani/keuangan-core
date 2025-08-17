@@ -1,0 +1,6 @@
+/.*/
+/src/test
+/target/
+!/.mvn
+
+.DS_Store
