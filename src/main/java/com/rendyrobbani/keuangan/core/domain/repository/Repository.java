@@ -12,8 +12,4 @@ public interface Repository<ENTITY extends BaseEntity<ID>, ID> {
 
 	ENTITY save(ENTITY entity);
 
-	void deleteAll();
-
-	ENTITY deleteById(ID id);
-
 }
