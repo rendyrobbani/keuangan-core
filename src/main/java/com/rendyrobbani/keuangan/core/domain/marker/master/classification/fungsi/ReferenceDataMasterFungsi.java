@@ -1,4 +1,4 @@
-package com.rendyrobbani.keuangan.core.domain.marker.master.fungsi;
+package com.rendyrobbani.keuangan.core.domain.marker.master.classification.fungsi;
 
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.fungsi.DataMasterFungsi;
 

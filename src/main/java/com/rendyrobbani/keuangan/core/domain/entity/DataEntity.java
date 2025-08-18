@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 
 public interface DataEntity<ID> extends BaseEntity<ID>,
                                         HasCreate,
+                                        HasCreateMutator,
                                         HasUpdate,
                                         HasUpdateMutator,
                                         HasDelete,

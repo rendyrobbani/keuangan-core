@@ -1,15 +1,13 @@
-package com.rendyrobbani.keuangan.core.domain.entity.master.classification.subfungsi;
+package com.rendyrobbani.keuangan.core.domain.entity.master.classification.urusan;
 
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.DataMasterClassificationEntity;
-import com.rendyrobbani.keuangan.core.domain.marker.master.classification.fungsi.ReferenceDataMasterFungsi;
-import com.rendyrobbani.keuangan.core.domain.vo.classification.fungsi.SubfungsiClassification;
+import com.rendyrobbani.keuangan.core.domain.vo.classification.urusan.UrusanClassification;
 
 import java.time.LocalDateTime;
 
-public interface DataMasterSubfungsi extends DataMasterClassificationEntity,
-                                             ReferenceDataMasterFungsi {
+public interface DataMasterUrusan extends DataMasterClassificationEntity {
 
-	String TABLE_NAME = "data_master_subfungsi";
+	String TABLE_NAME = "data_master_urusan";
 
 	@Override
 	String id();
@@ -50,10 +48,7 @@ public interface DataMasterSubfungsi extends DataMasterClassificationEntity,
 	@Override
 	String deletedBy();
 
-	@Override
-	String fungsiId();
-
-	void create(SubfungsiClassification classification, String name, LocalDateTime createdAt, String createdBy);
+	void create(UrusanClassification classification, String name, LocalDateTime createdAt, String createdBy);
 
 	void update(String name, LocalDateTime updatedAt, String updatedBy);
 
