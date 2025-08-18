@@ -25,4 +25,6 @@ public final class SubfungsiClassification {
 		                                   String.join(".", groups.subList(0, 2)));
 	}
 
+//	public static SubfungsiClassification parseFromKegiatan
+
 }
