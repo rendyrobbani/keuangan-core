@@ -55,4 +55,6 @@ public interface SipdMasterClassificationEntity<SUBJECT extends DataMasterClassi
 
 	void create(Long id, String code, String name, String subjectId, LocalDateTime createdAt, String createdBy);
 
+	void update(String code, String name, String subjectId, LocalDateTime createdAt, String createdBy);
+
 }
