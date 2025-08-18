@@ -3,6 +3,7 @@ package com.rendyrobbani.keuangan.core.domain.entity.master.classification.subke
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.DataMasterClassificationEntity;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.bidang.ReferenceDataMasterBidang;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.fungsi.ReferenceDataMasterFungsi;
+import com.rendyrobbani.keuangan.core.domain.marker.master.classification.kegiatan.ReferenceDataMasterKegiatan;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.program.ReferenceDataMasterProgram;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.subfungsi.ReferenceDataMasterSubfungsi;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.urusan.ReferenceDataMasterUrusan;
@@ -14,6 +15,7 @@ public interface DataMasterSubkegiatan extends DataMasterClassificationEntity,
                                                ReferenceDataMasterUrusan,
                                                ReferenceDataMasterBidang,
                                                ReferenceDataMasterProgram,
+                                               ReferenceDataMasterKegiatan,
                                                ReferenceDataMasterFungsi,
                                                ReferenceDataMasterSubfungsi {
 
