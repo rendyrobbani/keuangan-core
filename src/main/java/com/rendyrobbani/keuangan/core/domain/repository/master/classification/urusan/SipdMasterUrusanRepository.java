@@ -1,8 +1,9 @@
 package com.rendyrobbani.keuangan.core.domain.repository.master.classification.urusan;
 
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.urusan.DataMasterUrusan;
-import com.rendyrobbani.keuangan.core.domain.repository.Repository;
+import com.rendyrobbani.keuangan.core.domain.entity.master.classification.urusan.SipdMasterUrusan;
+import com.rendyrobbani.keuangan.core.domain.repository.master.classification.SipdMasterClassificationRepository;
 
-public interface SipdMasterUrusanRepository extends Repository<DataMasterUrusan, String> {
+public interface SipdMasterUrusanRepository extends SipdMasterClassificationRepository<SipdMasterUrusan, DataMasterUrusan> {
 
 }
