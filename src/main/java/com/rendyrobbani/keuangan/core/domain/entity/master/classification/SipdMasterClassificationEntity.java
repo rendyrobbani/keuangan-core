@@ -53,6 +53,6 @@ public interface SipdMasterClassificationEntity<SUBJECT extends DataMasterClassi
 	@Override
 	String subjectId();
 
-	void create(Long id, String code, String name, LocalDateTime createdAt, String createdBy);
+	void create(Long id, String code, String name, String subjectId, LocalDateTime createdAt, String createdBy);
 
 }
