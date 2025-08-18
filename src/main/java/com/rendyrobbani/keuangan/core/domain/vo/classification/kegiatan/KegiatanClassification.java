@@ -1,6 +1,7 @@
 package com.rendyrobbani.keuangan.core.domain.vo.classification.kegiatan;
 
 import com.rendyrobbani.keuangan.core.common.util.regex.RegexUtil;
+import com.rendyrobbani.keuangan.core.domain.vo.classification.fungsi.SubfungsiClassification;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -11,6 +12,10 @@ import lombok.experimental.Accessors;
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 @SuppressWarnings("ClassCanBeRecord")
 public final class KegiatanClassification {
+
+	private final String fungsiCode;
+
+	private final String subfungsiCode;
 
 	private final String urusanCode;
 
@@ -25,7 +30,10 @@ public final class KegiatanClassification {
 	public static KegiatanClassification parse(String code) {
 		if (code.matches(REGEX)) throw new RuntimeException("Invalid code");
 		var groups = RegexUtil.groups(code, REGEX);
-		return new KegiatanClassification(String.join(".", groups.subList(0, 1)),
+		SubfungsiClassification subfungsiClassification = SubfungsiClassification.parseFromKegiatanCode(code);
+		return new KegiatanClassification(subfungsiClassification.fungsiCode(),
+		                                  subfungsiClassification.subfungsiCode(),
+		                                  String.join(".", groups.subList(0, 1)),
 		                                  String.join(".", groups.subList(0, 2)),
 		                                  String.join(".", groups.subList(0, 3)),
 		                                  String.join(".", groups.subList(0, 4)));

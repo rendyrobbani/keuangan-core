@@ -27,7 +27,7 @@ public final class Nip {
 	public static final String REGEX = "^(19[0-9]{2}|20[0-9]{2})(0[1-9]|1[0-2])(0[1-9]|[12][0-9]|3[01])(19[0-9]{2}|20[0-9]{2})(0[1-9]|1[0-2]|21)([12])(00[1-9]|[0-9][1-9][0-9]|[1-9][0-9][0-9])$";
 
 	public static Nip parse(String value) {
-		if (!value.matches(REGEX)) throw new RuntimeException("invalid value");
+		if (!value.matches(REGEX)) throw new RuntimeException("Invalid value");
 		var dateOfBirth = value.substring(0, 8);
 		var dateOfStart = value.substring(8, 14);
 		var gender = value.substring(14, 15);
