@@ -2,6 +2,7 @@ package com.rendyrobbani.keuangan.core.domain.entity.master.classification.subfu
 
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.DataMasterClassificationEntity;
 import com.rendyrobbani.keuangan.core.domain.marker.master.fungsi.ReferenceDataMasterFungsi;
+import com.rendyrobbani.keuangan.core.domain.vo.classification.fungsi.SubfungsiClassification;
 
 import java.time.LocalDateTime;
 
@@ -49,5 +50,9 @@ public interface DataMasterSubfungsi extends DataMasterClassificationEntity,
 
 	@Override
 	String fungsiId();
+
+	void create(SubfungsiClassification classification, String name, LocalDateTime createdAt, String createdBy);
+
+	void update(String name, LocalDateTime updatedAt, String updatedBy);
 
 }

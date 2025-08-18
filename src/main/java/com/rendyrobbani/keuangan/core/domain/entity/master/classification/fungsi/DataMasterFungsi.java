@@ -1,6 +1,7 @@
 package com.rendyrobbani.keuangan.core.domain.entity.master.classification.fungsi;
 
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.DataMasterClassificationEntity;
+import com.rendyrobbani.keuangan.core.domain.vo.classification.fungsi.FungsiClassification;
 
 import java.time.LocalDateTime;
 
@@ -44,5 +45,9 @@ public interface DataMasterFungsi extends DataMasterClassificationEntity {
 
 	@Override
 	String deletedBy();
+
+	void create(FungsiClassification classification, String name, LocalDateTime createdAt, String createdBy);
+
+	void update(String name, LocalDateTime updatedAt, String updatedBy);
 
 }
