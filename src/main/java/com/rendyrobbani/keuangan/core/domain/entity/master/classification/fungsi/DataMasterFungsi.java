@@ -7,6 +7,8 @@ import java.time.LocalDateTime;
 
 public interface DataMasterFungsi extends DataMasterClassificationEntity {
 
+	String TABLE_NAME = "data_master_fungsi";
+
 	@Override
 	String id();
 
