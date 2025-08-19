@@ -7,7 +7,7 @@ public interface HasName {
 	String name();
 
 	default String name(boolean toUpperCase) {
-		return NameUtil.onlyName(this.name(), toUpperCase);
+		return NameUtil.nameOnly(this.name(), toUpperCase);
 	}
 
 }

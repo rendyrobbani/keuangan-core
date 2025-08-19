@@ -39,9 +39,9 @@ public final class OrganisasiClassification {
 		                                    code,
 		                                    code.endsWith("0000"),
 		                                    !code.endsWith("0000"),
-		                                    groups.get(0),
-		                                    groups.get(1),
-		                                    groups.get(2),
+		                                    groups.get(0).equals("0.00") ? null : groups.get(0),
+		                                    groups.get(1).equals("0.00") ? null : groups.get(1),
+		                                    groups.get(2).equals("0.00") ? null : groups.get(2),
 		                                    groups.get(3),
 		                                    groups.get(4));
 	}

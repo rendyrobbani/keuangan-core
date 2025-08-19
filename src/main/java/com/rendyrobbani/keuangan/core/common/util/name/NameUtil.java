@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class NameUtil {
 
-	public static String onlyName(String name, boolean toUpperCase) {
+	public static String nameOnly(String name, boolean toUpperCase) {
 		if (name == null || name.isBlank()) return name;
 		if (toUpperCase) {
 			name = name.toUpperCase();
@@ -16,12 +16,12 @@ public final class NameUtil {
 		return name;
 	}
 
-	public static String fullName(String name, boolean toUpperCase, String titlePrefix, String titleSuffix) {
+	public static String nameFull(String name, boolean toUpperCase, String titlePrefix, String titleSuffix) {
 		if (name == null || name.isBlank()) return name;
-		var fullName = onlyName(name, toUpperCase);
-		if (titlePrefix != null && !titlePrefix.isEmpty()) fullName = titlePrefix + " " + fullName;
-		if (titleSuffix != null && !titleSuffix.isEmpty()) fullName = fullName + ", " + titleSuffix;
-		return fullName;
+		var nameFull = nameOnly(name, toUpperCase);
+		if (titlePrefix != null && !titlePrefix.isEmpty()) nameFull = titlePrefix + " " + nameFull;
+		if (titleSuffix != null && !titleSuffix.isEmpty()) nameFull = nameFull + ", " + titleSuffix;
+		return nameFull;
 	}
 
 }

@@ -8,12 +8,12 @@ public interface HasNameAndTitles extends HasName {
 
 	String titleSuffix();
 
-	default String onlyName(boolean toUpperCase) {
-		return NameUtil.onlyName(this.name(), toUpperCase);
+	default String nameOnly(boolean toUpperCase) {
+		return NameUtil.nameOnly(this.name(), toUpperCase);
 	}
 
-	default String fullName(boolean toUpperCase) {
-		return NameUtil.fullName(this.name(), toUpperCase, this.titlePrefix(), this.titleSuffix());
+	default String nameFull(boolean toUpperCase) {
+		return NameUtil.nameFull(this.name(), toUpperCase, this.titlePrefix(), this.titleSuffix());
 	}
 
 }
