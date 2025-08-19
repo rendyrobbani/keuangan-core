@@ -1,11 +1,14 @@
 package com.rendyrobbani.keuangan.core.domain.marker;
 
 import com.rendyrobbani.keuangan.core.common.util.name.NameUtil;
+import com.rendyrobbani.keuangan.core.domain.vo.JabatanStatus;
 import com.rendyrobbani.keuangan.core.domain.vo.Pangkat;
 
 public interface HasHeadOfOrganisasi extends HasName {
 
 	String headId();
+
+	JabatanStatus headStatus();
 
 	Pangkat headPangkat();
 

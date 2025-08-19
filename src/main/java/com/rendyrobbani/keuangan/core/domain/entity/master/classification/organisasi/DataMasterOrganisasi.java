@@ -5,6 +5,7 @@ import com.rendyrobbani.keuangan.core.common.classification.organisasi.Organisas
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.bidang.DataMasterBidang;
 import com.rendyrobbani.keuangan.core.domain.entity.user.DataUser;
 import com.rendyrobbani.keuangan.core.domain.marker.HasHeadOfOrganisasi;
+import com.rendyrobbani.keuangan.core.domain.vo.JabatanStatus;
 import com.rendyrobbani.keuangan.core.domain.vo.Pangkat;
 
 import java.time.LocalDateTime;
@@ -91,6 +92,10 @@ public interface DataMasterOrganisasi extends DataMasterClassificationEntity,
 
 	@Override
 	String headId();
+
+
+	@Override
+	JabatanStatus headStatus();
 
 	DataUser head();
 
