@@ -123,8 +123,8 @@ public interface DataMasterOrganisasi extends DataMasterClassificationEntity,
 		return this.head().titleSuffix();
 	}
 
-	void create(OrganisasiClassification classification, String name, Byte mainBidangIndex, String headId, LocalDateTime createdAt, String createdBy);
+	void create(OrganisasiClassification classification, String name, Byte mainBidangIndex, String headId, JabatanStatus headStatus, LocalDateTime createdAt, String createdBy);
 
-	void update(String name, Byte mainBidangIndex, String headId, LocalDateTime updatedAt, String updatedBy);
+	void update(String name, Byte mainBidangIndex, String headId, JabatanStatus headStatus, LocalDateTime updatedAt, String updatedBy);
 
 }
