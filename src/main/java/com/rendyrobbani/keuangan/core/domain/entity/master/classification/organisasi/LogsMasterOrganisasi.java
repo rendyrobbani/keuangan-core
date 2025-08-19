@@ -11,6 +11,8 @@ import java.time.LocalDateTime;
 public interface LogsMasterOrganisasi extends LogsMasterClassificationEntity<DataMasterOrganisasi>,
                                               HasHeadOfOrganisasi {
 
+	String TABLE_NAME = "logs_master_organisasi";
+
 	@Override
 	Long id();
 
