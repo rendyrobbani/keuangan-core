@@ -1,7 +1,7 @@
-package com.rendyrobbani.keuangan.core.domain.vo.classification.kegiatan;
+package com.rendyrobbani.keuangan.core.common.classification.kegiatan;
 
 import com.rendyrobbani.keuangan.core.common.util.regex.RegexUtil;
-import com.rendyrobbani.keuangan.core.domain.vo.classification.fungsi.SubfungsiClassification;
+import com.rendyrobbani.keuangan.core.common.classification.fungsi.SubfungsiClassification;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -29,10 +29,10 @@ public final class SubkegiatanClassification {
 
 	public static final String REGEX = "^(?!X\\.[0-9]{2}.*|[0-9]\\.XX.*|0.*|..00.*|.{4}.00.*|.{7}.0.*|.{7}..00.*$)([X1-8])\\.(?!00$)([X0-9]{2})\\.(?!00$)(\\d{2})\\.((?!0$)\\d\\.(?!00$)\\d{2})\\.(?!0{4}$)(\\d{4})$";
 
-	public static SubkegiatanClassification parse(String code) {
+	public static SubkegiatanClassification classify(String code) {
 		if (!code.matches(REGEX)) throw new RuntimeException("Invalid code");
 		var groups = RegexUtil.groups(code, REGEX);
-		SubfungsiClassification subfungsiClassification = SubfungsiClassification.parseFromKegiatanCode(code);
+		SubfungsiClassification subfungsiClassification = SubfungsiClassification.classifyFromKegiatanCode(code);
 		return new SubkegiatanClassification(subfungsiClassification.fungsiCode(),
 		                                     subfungsiClassification.subfungsiCode(),
 		                                     String.join(".", groups.subList(0, 1)),

@@ -1,4 +1,4 @@
-package com.rendyrobbani.keuangan.core.domain.vo.classification.program;
+package com.rendyrobbani.keuangan.core.common.classification.program;
 
 import com.rendyrobbani.keuangan.core.common.util.regex.RegexUtil;
 import lombok.AccessLevel;
@@ -20,7 +20,7 @@ public final class ProgramClassification {
 
 	public static final String REGEX = "^(?!X\\.[0-9]{2}.*|[0-9]\\.XX.*|0.*|..00.*|.{4}.00.*$)([X1-8])\\.(?!00$)([X0-9]{2})\\.(?!00$)(\\d{2})$";
 
-	public static ProgramClassification parse(String code) {
+	public static ProgramClassification classify(String code) {
 		if (!code.matches(REGEX)) throw new RuntimeException("Invalid code");
 		var groups = RegexUtil.groups(code, REGEX);
 		return new ProgramClassification(String.join(".", groups.subList(0, 1)),

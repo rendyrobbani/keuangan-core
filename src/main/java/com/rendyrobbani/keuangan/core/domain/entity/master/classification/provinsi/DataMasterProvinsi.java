@@ -1,7 +1,7 @@
 package com.rendyrobbani.keuangan.core.domain.entity.master.classification.provinsi;
 
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.DataMasterClassificationEntity;
-import com.rendyrobbani.keuangan.core.domain.vo.classification.daerah.ProvinsiClassification;
+import com.rendyrobbani.keuangan.core.common.classification.daerah.ProvinsiClassification;
 
 import java.time.LocalDateTime;
 

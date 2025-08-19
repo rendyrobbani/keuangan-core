@@ -2,7 +2,7 @@ package com.rendyrobbani.keuangan.core.domain.entity.master.classification.kabup
 
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.DataMasterClassificationEntity;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.provinsi.ReferenceDataMasterProvinsi;
-import com.rendyrobbani.keuangan.core.domain.vo.classification.daerah.KabupatenClassification;
+import com.rendyrobbani.keuangan.core.common.classification.daerah.KabupatenClassification;
 
 import java.time.LocalDateTime;
 

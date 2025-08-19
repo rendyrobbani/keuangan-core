@@ -2,7 +2,7 @@ package com.rendyrobbani.keuangan.core.domain.entity.master.classification.bidan
 
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.DataMasterClassificationEntity;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.urusan.ReferenceDataMasterUrusan;
-import com.rendyrobbani.keuangan.core.domain.vo.classification.urusan.BidangClassification;
+import com.rendyrobbani.keuangan.core.common.classification.urusan.BidangClassification;
 
 import java.time.LocalDateTime;
 

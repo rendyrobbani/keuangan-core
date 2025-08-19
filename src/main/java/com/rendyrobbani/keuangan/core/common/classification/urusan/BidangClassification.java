@@ -1,4 +1,4 @@
-package com.rendyrobbani.keuangan.core.domain.vo.classification.urusan;
+package com.rendyrobbani.keuangan.core.common.classification.urusan;
 
 import com.rendyrobbani.keuangan.core.common.util.regex.RegexUtil;
 import lombok.AccessLevel;
@@ -18,7 +18,7 @@ public final class BidangClassification {
 
 	public static final String REGEX = "^(?!X\\.[0-9]{2}.*|[0-9]\\.XX.*|0.*|..00.*$)([X1-8])\\.(?!00$)([X0-9]{2})$";
 
-	public static BidangClassification parse(String code) {
+	public static BidangClassification classify(String code) {
 		if (!code.matches(REGEX)) throw new RuntimeException("Invalid code");
 		var groups = RegexUtil.groups(code, REGEX);
 		return new BidangClassification(String.join(".", groups.subList(0, 1)),

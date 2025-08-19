@@ -1,4 +1,4 @@
-package com.rendyrobbani.keuangan.core.domain.vo.classification.lokasi;
+package com.rendyrobbani.keuangan.core.common.classification.lokasi;
 
 import com.rendyrobbani.keuangan.core.common.util.regex.RegexUtil;
 import lombok.AccessLevel;
@@ -22,7 +22,7 @@ public final class KelurahanClassification {
 
 	public static final String REGEX = "^(?!00.*|.{2}.00.*|.{5}.00.*|.{8}.00.*$)(\\d{2})\\.(?!00$)(\\d{2})\\.(?!00$)(\\d{2})\\.(?!0{4}$)(\\d{4})$";
 
-	public static KelurahanClassification parse(String code) {
+	public static KelurahanClassification classify(String code) {
 		if (!code.matches(REGEX)) throw new RuntimeException("Invalid code");
 		var groups = RegexUtil.groups(code, REGEX);
 		return new KelurahanClassification(String.join(".", groups.subList(0, 1)),

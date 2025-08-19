@@ -2,7 +2,7 @@ package com.rendyrobbani.keuangan.core.domain.entity.master.classification.subfu
 
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.DataMasterClassificationEntity;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.fungsi.ReferenceDataMasterFungsi;
-import com.rendyrobbani.keuangan.core.domain.vo.classification.fungsi.SubfungsiClassification;
+import com.rendyrobbani.keuangan.core.common.classification.fungsi.SubfungsiClassification;
 
 import java.time.LocalDateTime;
 

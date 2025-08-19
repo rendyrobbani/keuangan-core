@@ -1,7 +1,7 @@
 package com.rendyrobbani.keuangan.core.domain.entity.master.classification.fungsi;
 
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.DataMasterClassificationEntity;
-import com.rendyrobbani.keuangan.core.domain.vo.classification.fungsi.FungsiClassification;
+import com.rendyrobbani.keuangan.core.common.classification.fungsi.FungsiClassification;
 
 import java.time.LocalDateTime;
 

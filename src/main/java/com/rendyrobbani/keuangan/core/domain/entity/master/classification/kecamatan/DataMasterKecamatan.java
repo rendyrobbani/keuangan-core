@@ -3,7 +3,7 @@ package com.rendyrobbani.keuangan.core.domain.entity.master.classification.kecam
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.DataMasterClassificationEntity;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.kabupaten.ReferenceDataMasterKabupaten;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.provinsi.ReferenceDataMasterProvinsi;
-import com.rendyrobbani.keuangan.core.domain.vo.classification.lokasi.KecamatanClassification;
+import com.rendyrobbani.keuangan.core.common.classification.lokasi.KecamatanClassification;
 
 import java.time.LocalDateTime;
 

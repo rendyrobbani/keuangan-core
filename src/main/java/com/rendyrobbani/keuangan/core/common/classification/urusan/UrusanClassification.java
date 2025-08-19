@@ -1,4 +1,4 @@
-package com.rendyrobbani.keuangan.core.domain.vo.classification.urusan;
+package com.rendyrobbani.keuangan.core.common.classification.urusan;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -15,7 +15,7 @@ public final class UrusanClassification {
 
 	public static final String REGEX = "^[X1-8]$";
 
-	public static UrusanClassification parse(String code) {
+	public static UrusanClassification classify(String code) {
 		if (code.matches(REGEX)) throw new RuntimeException("Invalid code");
 		return new UrusanClassification(code);
 	}

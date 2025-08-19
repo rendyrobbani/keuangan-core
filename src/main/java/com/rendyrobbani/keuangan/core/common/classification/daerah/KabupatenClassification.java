@@ -1,4 +1,4 @@
-package com.rendyrobbani.keuangan.core.domain.vo.classification.daerah;
+package com.rendyrobbani.keuangan.core.common.classification.daerah;
 
 import com.rendyrobbani.keuangan.core.common.util.regex.RegexUtil;
 import lombok.AccessLevel;
@@ -18,7 +18,7 @@ public final class KabupatenClassification {
 
 	public static final String REGEX = "^(?!00.*|.{2}.00.*$)(\\d{2})\\.(?!00$)(\\d{2})$";
 
-	public static KabupatenClassification parse(String code) {
+	public static KabupatenClassification classify(String code) {
 		if (!code.matches(REGEX)) throw new RuntimeException("Invalid code");
 		var groups = RegexUtil.groups(code, REGEX);
 		return new KabupatenClassification(String.join(".", groups.subList(0, 1)),

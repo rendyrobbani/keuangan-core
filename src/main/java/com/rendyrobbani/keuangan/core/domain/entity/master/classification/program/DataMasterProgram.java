@@ -3,7 +3,7 @@ package com.rendyrobbani.keuangan.core.domain.entity.master.classification.progr
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.DataMasterClassificationEntity;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.bidang.ReferenceDataMasterBidang;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.urusan.ReferenceDataMasterUrusan;
-import com.rendyrobbani.keuangan.core.domain.vo.classification.program.ProgramClassification;
+import com.rendyrobbani.keuangan.core.common.classification.program.ProgramClassification;
 
 import java.time.LocalDateTime;
 

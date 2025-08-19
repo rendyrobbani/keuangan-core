@@ -1,7 +1,7 @@
 package com.rendyrobbani.keuangan.core.domain.entity.master.classification.urusan;
 
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.DataMasterClassificationEntity;
-import com.rendyrobbani.keuangan.core.domain.vo.classification.urusan.UrusanClassification;
+import com.rendyrobbani.keuangan.core.common.classification.urusan.UrusanClassification;
 
 import java.time.LocalDateTime;
 

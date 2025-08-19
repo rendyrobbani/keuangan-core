@@ -7,7 +7,7 @@ import com.rendyrobbani.keuangan.core.domain.marker.master.classification.kegiat
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.program.ReferenceDataMasterProgram;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.subfungsi.ReferenceDataMasterSubfungsi;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.urusan.ReferenceDataMasterUrusan;
-import com.rendyrobbani.keuangan.core.domain.vo.classification.kegiatan.SubkegiatanClassification;
+import com.rendyrobbani.keuangan.core.common.classification.kegiatan.SubkegiatanClassification;
 
 import java.time.LocalDateTime;
 

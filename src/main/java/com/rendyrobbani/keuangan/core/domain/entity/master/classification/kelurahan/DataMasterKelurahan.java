@@ -4,7 +4,7 @@ import com.rendyrobbani.keuangan.core.domain.entity.master.classification.DataMa
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.kabupaten.ReferenceDataMasterKabupaten;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.kecamatan.ReferenceDataMasterKecamatan;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.provinsi.ReferenceDataMasterProvinsi;
-import com.rendyrobbani.keuangan.core.domain.vo.classification.lokasi.KelurahanClassification;
+import com.rendyrobbani.keuangan.core.common.classification.lokasi.KelurahanClassification;
 
 import java.time.LocalDateTime;
 
