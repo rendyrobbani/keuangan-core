@@ -20,11 +20,11 @@ public final class OrganisasiClassification {
 
 	private final boolean isUnit;
 
-	private final String bidang1Id;
+	private final String bidang1Code;
 
-	private final String bidang2Id;
+	private final String bidang2Code;
 
-	private final String bidang3Id;
+	private final String bidang3Code;
 
 	private final String skpdIndex;
 
