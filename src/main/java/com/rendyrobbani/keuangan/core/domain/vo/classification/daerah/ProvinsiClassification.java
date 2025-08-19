@@ -1,4 +1,4 @@
-package com.rendyrobbani.keuangan.core.domain.vo.classification.fungsi;
+package com.rendyrobbani.keuangan.core.domain.vo.classification.daerah;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -9,15 +9,15 @@ import lombok.experimental.Accessors;
 @Accessors(fluent = true)
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 @SuppressWarnings("ClassCanBeRecord")
-public final class FungsiClassification {
+public final class ProvinsiClassification {
 
-	private final String fungsiCode;
+	private final String provinsiCode;
 
 	public static final String REGEX = "^(?!00.*$)(\\d{2})$";
 
-	public static FungsiClassification parse(String code) {
+	public static ProvinsiClassification parse(String code) {
 		if (code.matches(REGEX)) throw new RuntimeException("Invalid code");
-		return new FungsiClassification(code);
+		return new ProvinsiClassification(code);
 	}
 
 }

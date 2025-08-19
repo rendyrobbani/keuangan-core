@@ -16,7 +16,7 @@ public final class SubfungsiClassification {
 
 	private final String subfungsiCode;
 
-	public static final String REGEX = "^(\\d{2})\\.(\\d{2})$";
+	public static final String REGEX = "^(?!00.*|..00.*$)(\\d{2})\\.(?!00$)(\\d{2})$";
 
 	public static SubfungsiClassification parse(String code) {
 		if (!code.matches(REGEX)) throw new RuntimeException("Invalid code");
