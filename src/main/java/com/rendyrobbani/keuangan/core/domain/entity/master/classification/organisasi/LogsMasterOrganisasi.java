@@ -4,6 +4,7 @@ import com.rendyrobbani.keuangan.core.domain.entity.master.classification.LogsMa
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.bidang.DataMasterBidang;
 import com.rendyrobbani.keuangan.core.domain.entity.user.DataUser;
 import com.rendyrobbani.keuangan.core.domain.marker.HasHeadOfOrganisasi;
+import com.rendyrobbani.keuangan.core.domain.vo.JabatanStatus;
 import com.rendyrobbani.keuangan.core.domain.vo.Pangkat;
 
 import java.time.LocalDateTime;
@@ -43,6 +44,9 @@ public interface LogsMasterOrganisasi extends LogsMasterClassificationEntity<Dat
 	String bidang3Id();
 
 	DataMasterBidang bidang3();
+
+	@Override
+	JabatanStatus headStatus();
 
 	@Override
 	String headId();

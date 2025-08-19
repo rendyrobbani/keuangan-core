@@ -13,6 +13,11 @@ public interface ReferenceDataMasterProgram {
 		return this.program().code();
 	}
 
+	default String programCode(String bidangCode) {
+		if (this.program() == null) return null;
+		return this.program().code().replace("X.XX", bidangCode != null ? bidangCode : "X.XX");
+	}
+
 	default String programName() {
 		if (this.program() == null) return null;
 		return this.program().name();

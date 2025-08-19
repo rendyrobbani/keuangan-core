@@ -13,6 +13,11 @@ public interface ReferenceDataMasterSubkegiatan {
 		return this.subkegiatan().code();
 	}
 
+	default String subkegiatanCode(String bidangCode) {
+		if (this.subkegiatan() == null) return null;
+		return this.subkegiatan().code().replace("X.XX", bidangCode != null ? bidangCode : "X.XX");
+	}
+
 	default String subkegiatanName() {
 		if (this.subkegiatan() == null) return null;
 		return this.subkegiatan().name();
