@@ -53,6 +53,6 @@ public interface LogsUser extends LogsEntity<DataUser, String> {
 	String subjectId();
 
 	@Override
-	void create(DataUser dataUser, LocalDateTime createdAt, String createdBy);
+	void create(DataUser data, LocalDateTime createdAt, String createdBy);
 
 }

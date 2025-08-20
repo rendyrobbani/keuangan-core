@@ -4,7 +4,7 @@ import com.rendyrobbani.keuangan.core.domain.entity.master.classification.SipdMa
 
 import java.time.LocalDateTime;
 
-public interface SipdMasterRekening6 extends SipdMasterClassificationEntity<DataMasterRekening6> {
+public interface SipdMasterRekening6<SUBJECT extends DataMasterRekening6> extends SipdMasterClassificationEntity<SUBJECT> {
 
 	@Override
 	Long id();
@@ -46,7 +46,7 @@ public interface SipdMasterRekening6 extends SipdMasterClassificationEntity<Data
 	String deletedBy();
 
 	@Override
-	DataMasterRekening6 subject();
+	SUBJECT subject();
 
 	@Override
 	String subjectId();

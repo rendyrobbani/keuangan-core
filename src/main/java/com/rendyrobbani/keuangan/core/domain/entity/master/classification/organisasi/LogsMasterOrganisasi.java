@@ -90,6 +90,6 @@ public interface LogsMasterOrganisasi extends LogsMasterClassificationEntity<Dat
 	String subjectId();
 
 	@Override
-	void create(DataMasterOrganisasi dataMasterOrganisasi, LocalDateTime createdAt, String createdBy);
+	void create(DataMasterOrganisasi data, LocalDateTime createdAt, String createdBy);
 
 }
