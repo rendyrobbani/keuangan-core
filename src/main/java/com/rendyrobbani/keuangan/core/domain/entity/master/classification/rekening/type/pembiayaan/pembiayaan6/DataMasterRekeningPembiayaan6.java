@@ -89,10 +89,8 @@ public interface DataMasterRekeningPembiayaan6 extends DataMasterRekening6 {
 	@Override
 	DataMasterRekening5 rekening5();
 
-	@Override
-	void create(RekeningClassification classification, String name, LocalDateTime createdAt, String createdBy);
+	void create(RekeningClassification classification, String name, boolean isEnabled, LocalDateTime createdAt, String createdBy);
 
-	@Override
-	void update(String name, LocalDateTime updatedAt, String updatedBy);
+	void update(String name, boolean isEnabled, LocalDateTime updatedAt, String updatedBy);
 
 }
