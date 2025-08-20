@@ -7,6 +7,8 @@ import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekeni
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening4.DataMasterRekening4;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening5.DataMasterRekening5;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening6.DataMasterRekening6;
+import com.rendyrobbani.keuangan.core.domain.vo.BelanjaJenis;
+import com.rendyrobbani.keuangan.core.domain.vo.BelanjaLokus;
 
 import java.time.LocalDateTime;
 
@@ -22,6 +24,12 @@ public interface DataMasterRekeningBelanja6 extends DataMasterRekening6 {
 
 	@Override
 	String name();
+
+	boolean isEnabled();
+
+	BelanjaJenis jenis();
+
+	BelanjaLokus lokus();
 
 	@Override
 	boolean isLocked();

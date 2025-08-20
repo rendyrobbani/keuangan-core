@@ -23,6 +23,8 @@ public interface DataMasterRekeningPendapatan6 extends DataMasterRekening6 {
 	@Override
 	String name();
 
+	boolean isEnabled();
+
 	@Override
 	boolean isLocked();
 

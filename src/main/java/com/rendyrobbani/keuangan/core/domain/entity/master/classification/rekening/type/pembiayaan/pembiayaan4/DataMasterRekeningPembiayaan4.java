@@ -21,6 +21,10 @@ public interface DataMasterRekeningPembiayaan4 extends DataMasterRekening4 {
 	@Override
 	String name();
 
+	boolean isIncome();
+
+	boolean isExpend();
+
 	@Override
 	boolean isLocked();
 

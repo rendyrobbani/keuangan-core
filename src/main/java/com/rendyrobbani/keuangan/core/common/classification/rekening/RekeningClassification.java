@@ -9,7 +9,7 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(fluent = true)
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
-@SuppressWarnings("ClassCanBeRecord")
+@SuppressWarnings({"ClassCanBeRecord", "SizeReplaceableByIsEmpty"})
 public final class RekeningClassification {
 
 	private final Integer level;
@@ -50,7 +50,7 @@ public final class RekeningClassification {
 		return this.rekening1Code.equals("6");
 	}
 
-	public boolean isPendapatanLO() {
+	public boolean isPendapatanLo() {
 		return this.rekening1Code.equals("7");
 	}
 
