@@ -14,4 +14,8 @@ public interface SipdMasterRepository<ENTITY extends SipdMasterEntity<SUBJECT, S
 
 	List<ENTITY> findBySubjectId(SUBJECTID subjectId);
 
+	List<ENTITY> findBySubjectIdAndIsDeletedFalse(SUBJECTID subjectId);
+
+	List<ENTITY> findBySubjectIdAndIsDeletedTrue(SUBJECTID subjectId);
+
 }
