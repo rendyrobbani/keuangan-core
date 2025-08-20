@@ -1,17 +1,14 @@
-package com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening3;
+package com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.type.aset.aset2;
 
-import com.rendyrobbani.keuangan.core.domain.entity.master.classification.DataMasterClassificationEntity;
 import com.rendyrobbani.keuangan.core.common.classification.rekening.RekeningClassification;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening1.DataMasterRekening1;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening2.DataMasterRekening2;
-import com.rendyrobbani.keuangan.core.domain.marker.master.classification.rekening.base.rekening1.ReferenceDataMasterRekening1;
-import com.rendyrobbani.keuangan.core.domain.marker.master.classification.rekening.base.rekening2.ReferenceDataMasterRekening2;
 
 import java.time.LocalDateTime;
 
-public interface DataMasterRekening3 extends DataMasterClassificationEntity,
-                                             ReferenceDataMasterRekening1,
-                                             ReferenceDataMasterRekening2 {
+public interface DataMasterRekeningAset2 extends DataMasterRekening2 {
+
+	String TABLE_NAME = "data_master_rekening_aset2";
 
 	@Override
 	String id();
@@ -56,16 +53,12 @@ public interface DataMasterRekening3 extends DataMasterClassificationEntity,
 	String rekening1Id();
 
 	@Override
-	String rekening2Id();
-
-	@Override
 	DataMasterRekening1 rekening1();
 
 	@Override
-	DataMasterRekening2 rekening2();
-
 	void create(RekeningClassification classification, String name, LocalDateTime createdAt, String createdBy);
 
+	@Override
 	void update(String name, LocalDateTime updatedAt, String updatedBy);
 
 }

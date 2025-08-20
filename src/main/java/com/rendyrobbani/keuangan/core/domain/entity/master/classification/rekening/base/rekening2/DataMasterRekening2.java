@@ -2,10 +2,13 @@ package com.rendyrobbani.keuangan.core.domain.entity.master.classification.reken
 
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.DataMasterClassificationEntity;
 import com.rendyrobbani.keuangan.core.common.classification.rekening.RekeningClassification;
+import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening1.DataMasterRekening1;
+import com.rendyrobbani.keuangan.core.domain.marker.master.classification.rekening.base.rekening1.ReferenceDataMasterRekening1;
 
 import java.time.LocalDateTime;
 
-public interface DataMasterRekening2 extends DataMasterClassificationEntity {
+public interface DataMasterRekening2 extends DataMasterClassificationEntity,
+                                             ReferenceDataMasterRekening1 {
 
 	@Override
 	String id();
@@ -46,7 +49,11 @@ public interface DataMasterRekening2 extends DataMasterClassificationEntity {
 	@Override
 	String deletedBy();
 
+	@Override
 	String rekening1Id();
+
+	@Override
+	DataMasterRekening1 rekening1();
 
 	void create(RekeningClassification classification, String name, LocalDateTime createdAt, String createdBy);
 
