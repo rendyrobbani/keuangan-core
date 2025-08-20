@@ -21,6 +21,14 @@ public interface LogsMasterOrganisasi extends LogsMasterClassificationEntity<Dat
 
 	String name();
 
+	boolean isSkpd();
+
+	boolean isUnit();
+
+	boolean isSetda();
+
+	boolean isSkpkd();
+
 	@Override
 	boolean isLocked();
 

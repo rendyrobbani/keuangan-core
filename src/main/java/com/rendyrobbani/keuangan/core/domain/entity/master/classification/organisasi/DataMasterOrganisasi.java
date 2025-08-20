@@ -26,6 +26,14 @@ public interface DataMasterOrganisasi extends DataMasterClassificationEntity,
 	@Override
 	String name();
 
+	boolean isSkpd();
+
+	boolean isUnit();
+
+	boolean isSetda();
+
+	boolean isSkpkd();
+
 	@Override
 	boolean isLocked();
 
@@ -93,7 +101,6 @@ public interface DataMasterOrganisasi extends DataMasterClassificationEntity,
 	@Override
 	String headId();
 
-
 	@Override
 	JabatanStatus headStatus();
 
@@ -123,8 +130,8 @@ public interface DataMasterOrganisasi extends DataMasterClassificationEntity,
 		return this.head().titleSuffix();
 	}
 
-	void create(OrganisasiClassification classification, String name, Byte mainBidangIndex, String headId, JabatanStatus headStatus, LocalDateTime createdAt, String createdBy);
+	void create(OrganisasiClassification classification, String name, boolean isSetda, boolean isSkpkd, Byte mainBidangIndex, String headId, JabatanStatus headStatus, LocalDateTime createdAt, String createdBy);
 
-	void update(String name, Byte mainBidangIndex, String headId, JabatanStatus headStatus, LocalDateTime updatedAt, String updatedBy);
+	void update(String name, boolean isSetda, boolean isSkpkd, Byte mainBidangIndex, String headId, JabatanStatus headStatus, LocalDateTime updatedAt, String updatedBy);
 
 }
