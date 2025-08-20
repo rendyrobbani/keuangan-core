@@ -1,12 +1,12 @@
-package com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.type.aset.aset2;
+package com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.type.aset.aset5;
 
-import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening2.SipdMasterRekening2;
+import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening5.SipdMasterRekening5;
 
 import java.time.LocalDateTime;
 
-public interface SipdMasterRekeningAset2 extends SipdMasterRekening2<DataMasterRekeningAset2> {
+public interface SipdMasterRekeningAset5 extends SipdMasterRekening5<DataMasterRekeningAset5> {
 
-	String TABLE_NAME = "sipd_master_rekening_aset2";
+	String TABLE_NAME = "sipd_master_rekening_aset5";
 
 	@Override
 	Long id();
@@ -48,7 +48,7 @@ public interface SipdMasterRekeningAset2 extends SipdMasterRekening2<DataMasterR
 	String deletedBy();
 
 	@Override
-	DataMasterRekeningAset2 subject();
+	DataMasterRekeningAset5 subject();
 
 	@Override
 	String subjectId();
