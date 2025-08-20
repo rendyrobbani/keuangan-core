@@ -53,8 +53,8 @@ public interface SipdMasterClassificationEntity<SUBJECT extends DataMasterClassi
 	@Override
 	String subjectId();
 
-	void create(Long id, String code, String name, String subjectId, boolean isLocked, boolean isDeleted, LocalDateTime createdAt, String createdBy);
+	void create(Long id, String code, String name, String subjectId, boolean isLocked, LocalDateTime createdAt, String createdBy);
 
-	void update(String code, String name, String subjectId, boolean isLocked, boolean isDeleted, LocalDateTime updatedAt, String updatedBy);
+	void update(String code, String name, String subjectId, boolean isLocked, LocalDateTime updatedAt, String updatedBy);
 
 }
