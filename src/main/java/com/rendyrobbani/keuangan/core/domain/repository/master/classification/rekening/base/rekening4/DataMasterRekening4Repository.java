@@ -13,16 +13,16 @@ public interface DataMasterRekening4Repository<ENTITY extends DataMasterRekening
 
 	List<ENTITY> findByRekening1IdAndIsDeletedTrue(String rekening1Id);
 
-	List<ENTITY> findByrekening2Id(String rekening2Id);
+	List<ENTITY> findByRekening2Id(String rekening2Id);
 
-	List<ENTITY> findByrekening2IdAndIsDeletedFalse(String rekening2Id);
+	List<ENTITY> findByRekening2IdAndIsDeletedFalse(String rekening2Id);
 
-	List<ENTITY> findByrekening2IdAndIsDeletedTrue(String rekening2Id);
+	List<ENTITY> findByRekening2IdAndIsDeletedTrue(String rekening2Id);
 
-	List<ENTITY> findByrekening3Id(String rekening3Id);
+	List<ENTITY> findByRekening3Id(String rekening3Id);
 
-	List<ENTITY> findByrekening3IdAndIsDeletedFalse(String rekening3Id);
+	List<ENTITY> findByRekening3IdAndIsDeletedFalse(String rekening3Id);
 
-	List<ENTITY> findByrekening3IdAndIsDeletedTrue(String rekening3Id);
+	List<ENTITY> findByRekening3IdAndIsDeletedTrue(String rekening3Id);
 
 }
