@@ -6,6 +6,8 @@ import java.time.LocalDateTime;
 
 public interface SipdMasterSumber extends SipdMasterClassificationEntity<DataMasterSumber> {
 
+	String TABLE_NAME = "sipd_master_sumber";
+
 	@Override
 	Long id();
 
