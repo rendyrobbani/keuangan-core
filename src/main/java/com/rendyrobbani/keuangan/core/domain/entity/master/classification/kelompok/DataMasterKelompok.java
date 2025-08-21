@@ -67,8 +67,8 @@ public interface DataMasterKelompok extends DataMasterClassificationEntity {
 
 	String kelompok6Id();
 
-	void create(KelompokClassification classification, String name, boolean isEnabled, KomponenType type, LocalDateTime createdAt, String createdBy);
+	void create(KelompokClassification classification, String name, KomponenType type, boolean isEnabled, LocalDateTime createdAt, String createdBy);
 
-	void update(String name, boolean isEnabled, KomponenType type, LocalDateTime updatedAt, String updatedBy);
+	void update(String name, KomponenType type, boolean isEnabled, LocalDateTime updatedAt, String updatedBy);
 
 }

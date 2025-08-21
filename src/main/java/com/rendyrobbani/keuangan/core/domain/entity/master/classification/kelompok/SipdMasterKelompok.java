@@ -56,10 +56,8 @@ public interface SipdMasterKelompok extends SipdMasterClassificationEntity<DataM
 	@Override
 	String subjectId();
 
-	@Override
-	void create(Long id, String code, String name, String subjectId, boolean isLocked, LocalDateTime createdAt, String createdBy);
+	void create(Long id, String code, String name, KomponenType type, String subjectId, boolean isLocked, LocalDateTime createdAt, String createdBy);
 
-	@Override
-	void update(String code, String name, String subjectId, boolean isLocked, LocalDateTime updatedAt, String updatedBy);
+	void update(String code, String name, KomponenType type, String subjectId, boolean isLocked, LocalDateTime updatedAt, String updatedBy);
 
 }
