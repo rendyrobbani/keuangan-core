@@ -130,6 +130,8 @@ public interface DataMasterOrganisasi extends DataMasterClassificationEntity,
 		return this.head().titleSuffix();
 	}
 
+	DataMasterOrganisasi skpd();
+
 	void create(OrganisasiClassification classification, String name, boolean isSetda, boolean isSkpkd, Byte mainBidangIndex, String headId, JabatanStatus headStatus, LocalDateTime createdAt, String createdBy);
 
 	void update(String name, boolean isSetda, boolean isSkpkd, Byte mainBidangIndex, String headId, JabatanStatus headStatus, LocalDateTime updatedAt, String updatedBy);
