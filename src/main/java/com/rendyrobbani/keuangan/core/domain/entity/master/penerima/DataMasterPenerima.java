@@ -1,7 +1,6 @@
 package com.rendyrobbani.keuangan.core.domain.entity.master.penerima;
 
 import com.rendyrobbani.keuangan.core.domain.entity.master.DataMasterEntity;
-import com.rendyrobbani.keuangan.core.domain.vo.BelanjaJenis;
 import com.rendyrobbani.keuangan.core.domain.vo.PenerimaJenis;
 
 import java.time.LocalDateTime;
@@ -15,7 +14,7 @@ public interface DataMasterPenerima extends DataMasterEntity<Long> {
 
 	String name();
 
-	BelanjaJenis jenis();
+	PenerimaJenis jenis();
 
 	String address();
 
