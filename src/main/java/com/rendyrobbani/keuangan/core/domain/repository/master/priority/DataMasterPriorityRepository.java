@@ -9,6 +9,8 @@ public interface DataMasterPriorityRepository<ENTITY extends DataMasterPriorityE
 
 	List<ENTITY> findByYear(Short year);
 
-	List<ENTITY> findByYearAndIsDeleted(Short year);
+	List<ENTITY> findByYearAndIsDeletedFalse(Short year);
+
+	List<ENTITY> findByYearAndIsDeletedTrue(Short year);
 
 }
