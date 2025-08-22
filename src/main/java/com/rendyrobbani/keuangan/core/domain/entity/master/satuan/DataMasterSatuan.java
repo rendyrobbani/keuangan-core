@@ -34,4 +34,8 @@ public interface DataMasterSatuan extends DataMasterEntity<Long> {
 	@Override
 	String deletedBy();
 
+	void create(Long id, String name, LocalDateTime createdAt, String createdBy);
+
+	void update(String name, LocalDateTime updatedAt, String updatedBy);
+
 }
