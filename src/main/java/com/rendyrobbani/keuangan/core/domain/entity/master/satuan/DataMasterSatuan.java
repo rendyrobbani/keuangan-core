@@ -3,14 +3,12 @@ package com.rendyrobbani.keuangan.core.domain.entity.master.satuan;
 import com.rendyrobbani.keuangan.core.domain.entity.master.DataMasterEntity;
 import com.rendyrobbani.keuangan.core.domain.marker.audit.HasLock;
 import com.rendyrobbani.keuangan.core.domain.marker.audit.HasLockMutator;
-import com.rendyrobbani.keuangan.core.domain.marker.master.classification.kelompok.ReferenceDataMasterKelompok;
 
 import java.time.LocalDateTime;
 
 public interface DataMasterSatuan extends DataMasterEntity<Long>,
                                           HasLock,
-                                          HasLockMutator,
-                                          ReferenceDataMasterKelompok {
+                                          HasLockMutator {
 
 	String TABLE_NAME = "data_master_satuan";
 
