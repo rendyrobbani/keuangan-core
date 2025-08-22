@@ -7,10 +7,10 @@ import java.util.List;
 
 public interface DataMasterSatuanRepository extends DataMasterRepository<DataMasterSatuan, Long> {
 
-	List<DataMasterSatuan> findByName();
+	List<DataMasterSatuan> findByName(String name);
 
-	List<DataMasterSatuan> findByNameAndIsDeletedFalse();
+	List<DataMasterSatuan> findByNameAndIsDeletedFalse(String name);
 
-	List<DataMasterSatuan> findByNameAndIsDeletedTrue();
+	List<DataMasterSatuan> findByNameAndIsDeletedTrue(String name);
 
 }
