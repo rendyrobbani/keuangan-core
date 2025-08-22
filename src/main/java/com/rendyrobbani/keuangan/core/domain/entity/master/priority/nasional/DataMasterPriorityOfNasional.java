@@ -57,10 +57,8 @@ public interface DataMasterPriorityOfNasional extends DataMasterPriorityEntity {
 	@Override
 	String deletedBy();
 
-	@Override
-	void create(Long id, Short year, Byte number, String name, String sipdName, LocalDateTime createdAt, String createdBy);
+	void create(Long id, Short year, Short fromYear, Short intoYear, Byte number, String name, String sipdName, LocalDateTime createdAt, String createdBy);
 
-	@Override
-	void update(Short year, Byte number, String name, String sipdName, LocalDateTime updatedAt, String updatedBy);
+	void update(Short year, Short fromYear, Short intoYear, Byte number, String name, String sipdName, LocalDateTime updatedAt, String updatedBy);
 
 }
