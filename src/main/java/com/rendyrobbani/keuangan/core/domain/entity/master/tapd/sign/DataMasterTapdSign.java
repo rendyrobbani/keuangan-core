@@ -75,8 +75,8 @@ public interface DataMasterTapdSign extends DataMasterEntity<String>,
 		return this.user().titleSuffix();
 	}
 
-	void create(DataUser user, String position, boolean isCanLockCreate, boolean isCanLockUpdate, boolean isCanLockDetail, LocalDateTime createdAt, String createdBy);
+	void create(DataUser user, Short number, String position, LocalDateTime createdAt, String createdBy);
 
-	void update(DataUser user, String position, boolean isCanLockCreate, boolean isCanLockUpdate, boolean isCanLockDetail, LocalDateTime updatedAt, String updatedBy);
+	void update(DataUser user, Short number, String position, LocalDateTime updatedAt, String updatedBy);
 
 }
