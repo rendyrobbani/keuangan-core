@@ -12,7 +12,7 @@ import lombok.experimental.Accessors;
 @SuppressWarnings({"ClassCanBeRecord", "SizeReplaceableByIsEmpty"})
 public final class KelompokClassification {
 
-	private final Integer level;
+	private final Byte level;
 
 	private final String kelompok1Code;
 
@@ -51,7 +51,7 @@ public final class KelompokClassification {
 			};
 			if (code.matches(regex)) {
 				var groups = RegexUtil.groups(code, regex);
-				return new KelompokClassification(level,
+				return new KelompokClassification((byte) level,
 				                                  groups.size() >= 1 ? String.join(".", groups.subList(0, 1)) : null,
 				                                  groups.size() >= 2 ? String.join(".", groups.subList(0, 2)) : null,
 				                                  groups.size() >= 3 ? String.join(".", groups.subList(0, 3)) : null,

@@ -12,7 +12,7 @@ import lombok.experimental.Accessors;
 @SuppressWarnings({"ClassCanBeRecord", "SizeReplaceableByIsEmpty"})
 public final class SumberClassification {
 
-	private final Integer level;
+	private final Byte level;
 
 	private final String sumber1Code;
 
@@ -59,7 +59,7 @@ public final class SumberClassification {
 			};
 			if (code.matches(regex)) {
 				var groups = RegexUtil.groups(code, regex);
-				return new SumberClassification(level,
+				return new SumberClassification((byte) level,
 				                                groups.size() >= 1 ? String.join(".", groups.subList(0, 1)) : null,
 				                                groups.size() >= 2 ? String.join(".", groups.subList(0, 2)) : null,
 				                                groups.size() >= 3 ? String.join(".", groups.subList(0, 3)) : null,
