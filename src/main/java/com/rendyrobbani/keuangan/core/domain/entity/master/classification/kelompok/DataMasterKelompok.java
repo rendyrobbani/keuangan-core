@@ -53,7 +53,7 @@ public interface DataMasterKelompok extends DataMasterClassificationEntity {
 	@Override
 	String deletedBy();
 
-	Integer level();
+	Byte level();
 
 	String kelompok1Id();
 

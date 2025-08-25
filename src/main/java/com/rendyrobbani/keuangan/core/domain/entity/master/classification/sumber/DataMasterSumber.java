@@ -50,7 +50,7 @@ public interface DataMasterSumber extends DataMasterClassificationEntity {
 	@Override
 	String deletedBy();
 
-	Integer level();
+	Byte level();
 
 	String sumber1Id();
 
