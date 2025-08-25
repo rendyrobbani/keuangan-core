@@ -21,8 +21,6 @@ public interface DataMasterKelompok extends DataMasterClassificationEntity {
 
 	KomponenType type();
 
-	boolean isEnabled();
-
 	@Override
 	boolean isLocked();
 
