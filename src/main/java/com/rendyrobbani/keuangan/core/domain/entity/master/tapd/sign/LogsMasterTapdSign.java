@@ -13,7 +13,7 @@ public interface LogsMasterTapdSign extends LogsMasterEntity<DataMasterTapdSign,
 
 	Short number();
 
-	String tapdId();
+	String teamId();
 
 	String position();
 
