@@ -41,6 +41,6 @@ public interface DataMasterTapdTeamOfSkpd extends DataMasterEntity<String> {
 	@Override
 	String deletedBy();
 
-	void create(String id, String tapdId, String skpdId, LocalDateTime createdAt, String createdBy);
+	void create(String tapdId, String skpdId, LocalDateTime createdAt, String createdBy);
 
 }
