@@ -21,6 +21,8 @@ public interface DataMasterTapdSign extends DataMasterEntity<String>,
 
 	Short number();
 
+	String teamId();
+
 	String position();
 
 	@Override
@@ -55,7 +57,7 @@ public interface DataMasterTapdSign extends DataMasterEntity<String>,
 
 	DataUser user();
 
-	DataMasterTapdTeam tapd();
+	DataMasterTapdTeam team();
 
 	@Override
 	default String name() {

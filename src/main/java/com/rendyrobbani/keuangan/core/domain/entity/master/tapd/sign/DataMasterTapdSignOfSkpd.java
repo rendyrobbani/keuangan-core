@@ -13,13 +13,15 @@ public interface DataMasterTapdSignOfSkpd extends DataMasterEntity<String> {
 	@Override
 	String id();
 
-	String tapdId();
+	String teamId();
+
+	String signId();
 
 	String skpdId();
 
-	DataMasterTapdTeam tapdTeam();
+	DataMasterTapdTeam team();
 
-	DataMasterTapdSign tapdSign();
+	DataMasterTapdSign sign();
 
 	DataMasterOrganisasi skpd();
 

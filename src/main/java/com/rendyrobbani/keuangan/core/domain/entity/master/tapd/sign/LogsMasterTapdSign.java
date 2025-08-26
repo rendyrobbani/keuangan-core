@@ -11,9 +11,11 @@ public interface LogsMasterTapdSign extends LogsMasterEntity<DataMasterTapdSign,
 	@Override
 	Long id();
 
-	String position();
-
 	Short number();
+
+	String tapdId();
+
+	String position();
 
 	boolean isLocked();
 
