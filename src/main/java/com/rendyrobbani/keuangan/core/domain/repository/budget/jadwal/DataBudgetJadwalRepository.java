@@ -8,7 +8,7 @@ public interface DataBudgetJadwalRepository extends DataBudgetRepository<DataBud
 
 	DataBudgetJadwal findByTahapan(BudgetTahapan tahapan);
 
-	DataBudgetJadwal findLatest(BudgetTahapan tahapan);
+	DataBudgetJadwal findLatest();
 
 	DataBudgetJadwal findRKPDMurni();
 
