@@ -84,8 +84,8 @@ public interface DataBudgetJadwal extends DataBudgetEntity<Long>,
 	@Override
 	String deletedBy();
 
-	void create(Short year, BudgetTahapan tahapan, DataBudgetJadwal rkpd, DataBudgetJadwal ppas, DataBudgetJadwal apbd, Long sipdId, String name, LocalDateTime from, LocalDateTime into, boolean isPerda, LocalDate perdaDate, String perdaNumber, boolean isPerkada, LocalDate perkadaDate, String perkadaNumber, LocalDateTime createdAt, String createdBy);
+	void create(BudgetTahapan tahapan, DataBudgetJadwal rkpd, DataBudgetJadwal ppas, DataBudgetJadwal apbd, Long sipdId, String name, LocalDateTime from, LocalDateTime into, boolean isPerda, LocalDate perdaDate, String perdaNumber, boolean isPerkada, LocalDate perkadaDate, String perkadaNumber, LocalDateTime createdAt, String createdBy);
 
-	void update(Short year, BudgetTahapan tahapan, DataBudgetJadwal rkpd, DataBudgetJadwal ppas, DataBudgetJadwal apbd, Long sipdId, String name, LocalDateTime from, LocalDateTime into, boolean isPerda, LocalDate perdaDate, String perdaNumber, boolean isPerkada, LocalDate perkadaDate, String perkadaNumber, LocalDateTime updatedAt, String updatedBy);
+	void update(BudgetTahapan tahapan, DataBudgetJadwal rkpd, DataBudgetJadwal ppas, DataBudgetJadwal apbd, Long sipdId, String name, LocalDateTime from, LocalDateTime into, boolean isPerda, LocalDate perdaDate, String perdaNumber, boolean isPerkada, LocalDate perkadaDate, String perkadaNumber, LocalDateTime updatedAt, String updatedBy);
 
 }
