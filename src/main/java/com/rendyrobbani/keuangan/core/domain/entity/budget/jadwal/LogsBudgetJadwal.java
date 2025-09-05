@@ -1,6 +1,7 @@
 package com.rendyrobbani.keuangan.core.domain.entity.budget.jadwal;
 
 import com.rendyrobbani.keuangan.core.domain.entity.budget.LogsBudgetEntity;
+import com.rendyrobbani.keuangan.core.domain.vo.BudgetTahapan;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -14,7 +15,7 @@ public interface LogsBudgetJadwal extends LogsBudgetEntity<DataBudgetJadwal, Lon
 
 	Short year();
 
-	Byte tahapanId();
+	BudgetTahapan tahapan();
 
 	Long rkpdId();
 

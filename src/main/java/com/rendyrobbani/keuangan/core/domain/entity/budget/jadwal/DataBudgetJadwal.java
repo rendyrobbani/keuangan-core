@@ -22,7 +22,7 @@ public interface DataBudgetJadwal extends DataBudgetEntity<Long>,
 	Short year();
 
 	@Override
-	Long tahapanId();
+	BudgetTahapan tahapan();
 
 	Long rkpdId();
 
