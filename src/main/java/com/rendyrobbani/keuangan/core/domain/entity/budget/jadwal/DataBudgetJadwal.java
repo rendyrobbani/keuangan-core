@@ -14,6 +14,8 @@ public interface DataBudgetJadwal extends DataBudgetEntity<Long>,
                                           HasLock,
                                           HasLockMutator {
 
+	String TABLE_NAME = "data_budget_jadwal";
+
 	@Override
 	Long id();
 

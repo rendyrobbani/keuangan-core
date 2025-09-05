@@ -7,6 +7,8 @@ import java.time.LocalDateTime;
 
 public interface LogsBudgetJadwal extends LogsBudgetEntity<DataBudgetJadwal, Long> {
 
+	String TABLE_NAME = "logs_budget_jadwal";
+
 	@Override
 	Long id();
 
