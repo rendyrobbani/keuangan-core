@@ -33,9 +33,9 @@ public interface LogsBudgetJadwal extends LogsBudgetEntity<DataBudgetJadwal, Lon
 
 	String name();
 
-	LocalDateTime from();
+	LocalDateTime fromTime();
 
-	LocalDateTime into();
+	LocalDateTime intoTime();
 
 	boolean isPerda();
 
