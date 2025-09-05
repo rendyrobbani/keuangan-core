@@ -4,7 +4,7 @@ import com.rendyrobbani.keuangan.core.domain.vo.BudgetTahapan;
 
 public interface HasBudgetTahapan {
 
-	Byte tahapanId();
+	Long tahapanId();
 
 	BudgetTahapan tahapan();
 
