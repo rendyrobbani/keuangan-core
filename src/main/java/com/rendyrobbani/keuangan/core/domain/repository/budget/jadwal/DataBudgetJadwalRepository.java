@@ -4,9 +4,11 @@ import com.rendyrobbani.keuangan.core.domain.entity.budget.jadwal.DataBudgetJadw
 import com.rendyrobbani.keuangan.core.domain.repository.budget.DataBudgetRepository;
 import com.rendyrobbani.keuangan.core.domain.vo.BudgetTahapan;
 
+import java.util.List;
+
 public interface DataBudgetJadwalRepository extends DataBudgetRepository<DataBudgetJadwal, Long> {
 
-	DataBudgetJadwal findByTahapan(BudgetTahapan tahapan);
+	List<DataBudgetJadwal> findByTahapan(BudgetTahapan tahapan);
 
 	DataBudgetJadwal findLatest();
 
