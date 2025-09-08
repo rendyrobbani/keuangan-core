@@ -7,7 +7,7 @@ import com.rendyrobbani.keuangan.core.domain.vo.JabatanStatus;
 
 import java.time.LocalDateTime;
 
-public interface DataBudgetRecordMayorEntity extends DataBudgetRecordEntity<DataMasterMayor, Byte> {
+public interface DataBudgetRecordMayor extends DataBudgetRecordEntity<DataMasterMayor, Byte> {
 
 	String TABLE_NAME = "data_budget_record_mayor";
 
