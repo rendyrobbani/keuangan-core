@@ -5,6 +5,7 @@ import com.rendyrobbani.keuangan.core.domain.entity.budget.jadwal.DataBudgetJadw
 import com.rendyrobbani.keuangan.core.domain.entity.budget.record.DataBudgetRecordEntity;
 import com.rendyrobbani.keuangan.core.domain.repository.budget.DataBudgetRepository;
 
+import java.sql.Connection;
 import java.util.List;
 
 public interface DataBudgetRecordRepository<ENTITY extends DataBudgetRecordEntity<COMMON, COMMONID>, COMMON extends DataEntity<COMMONID>, COMMONID> extends DataBudgetRepository<ENTITY, String> {
@@ -21,8 +22,8 @@ public interface DataBudgetRecordRepository<ENTITY extends DataBudgetRecordEntit
 
 	List<ENTITY> findByJadwalAndIsDeletedTrue(DataBudgetJadwal jadwal);
 
-	void saveByJadwal(DataBudgetJadwal jadwal);
+	void saveByJadwal(Connection connection, DataBudgetJadwal jadwal);
 
-	void deleteByJadwal(DataBudgetJadwal jadwal);
+	void deleteByJadwal(Connection connection, DataBudgetJadwal jadwal);
 
 }
