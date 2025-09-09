@@ -35,6 +35,7 @@ public interface DataBudgetRecordOrganisasi extends DataBudgetRecordEntity<DataM
 
 	String code();
 
+	@Override
 	String name();
 
 	boolean isSkpd();
@@ -79,18 +80,24 @@ public interface DataBudgetRecordOrganisasi extends DataBudgetRecordEntity<DataM
 		return bidangs;
 	}
 
+	@Override
 	String headId();
 
+	@Override
 	JabatanStatus headStatus();
 
 	DataUser head();
 
+	@Override
 	Pangkat headPangkat();
 
+	@Override
 	String headName();
 
+	@Override
 	String headTitlePrefix();
 
+	@Override
 	String headTitleSuffix();
 
 	DataBudgetRecordOrganisasi skpd();
