@@ -2,12 +2,13 @@ package com.rendyrobbani.keuangan.core.domain.entity.budget.record.tapd.sign;
 
 import com.rendyrobbani.keuangan.core.domain.entity.budget.jadwal.DataBudgetJadwal;
 import com.rendyrobbani.keuangan.core.domain.entity.budget.record.DataBudgetRecordEntity;
+import com.rendyrobbani.keuangan.core.domain.entity.master.tapd.sign.DataMasterTapdSign;
 import com.rendyrobbani.keuangan.core.domain.marker.HasNameAndTitles;
 import com.rendyrobbani.keuangan.core.domain.marker.audit.HasLock;
 
 import java.time.LocalDateTime;
 
-public interface DataBudgetRecordTapdSign extends DataBudgetRecordEntity<DataBudgetRecordTapdSign, String>,
+public interface DataBudgetRecordTapdSign extends DataBudgetRecordEntity<DataMasterTapdSign, String>,
                                                   HasNameAndTitles,
                                                   HasLock {
 
@@ -71,6 +72,6 @@ public interface DataBudgetRecordTapdSign extends DataBudgetRecordEntity<DataBud
 	String commonId();
 
 	@Override
-	DataBudgetRecordTapdSign common();
+	DataMasterTapdSign common();
 
 }
