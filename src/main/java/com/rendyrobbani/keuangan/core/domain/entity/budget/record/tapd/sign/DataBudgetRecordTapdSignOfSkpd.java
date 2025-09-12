@@ -12,6 +12,8 @@ import java.time.LocalDateTime;
 
 public interface DataBudgetRecordTapdSignOfSkpd extends DataBudgetRecordEntity<DataMasterTapdSignOfSkpd, String> {
 
+	String TABLE_NAME = "data_budget_record_tapd_sign_of_skpd";
+
 	@Override
 	String id();
 
