@@ -1,87 +1,33 @@
 package com.rendyrobbani.keuangan.core.domain.entity.budget.common.ie;
 
-import com.rendyrobbani.keuangan.core.domain.entity.budget.common.DataBudgetCommonEntity;
-import com.rendyrobbani.keuangan.core.domain.entity.master.classification.bidang.DataMasterBidang;
-import com.rendyrobbani.keuangan.core.domain.entity.master.classification.organisasi.DataMasterOrganisasi;
-import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening1.DataMasterRekening1;
-import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening2.DataMasterRekening2;
-import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening3.DataMasterRekening3;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening4.DataMasterRekening4;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening5.DataMasterRekening5;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening6.DataMasterRekening6;
-import com.rendyrobbani.keuangan.core.domain.entity.master.classification.urusan.DataMasterUrusan;
+import com.rendyrobbani.keuangan.core.domain.marker.master.classification.rekening.base.rekening4.ReferenceDataMasterRekening4;
+import com.rendyrobbani.keuangan.core.domain.marker.master.classification.rekening.base.rekening5.ReferenceDataMasterRekening5;
+import com.rendyrobbani.keuangan.core.domain.marker.master.classification.rekening.base.rekening6.ReferenceDataMasterRekening6;
 
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
-
-public interface DataBudgetCommonRekeningEntity extends DataBudgetCommonEntity<String> {
+public interface DataBudgetCommonRekeningEntity extends DataBudgetCommonJenisEntity,
+                                                        ReferenceDataMasterRekening4,
+                                                        ReferenceDataMasterRekening5,
+                                                        ReferenceDataMasterRekening6 {
 
 	@Override
-	String id();
-
-	String skpdId();
-
-	String unitId();
-
-	String urusanId();
-
-	String bidangId();
-
-	String rekening1Id();
-
-	String rekening2Id();
-
-	String rekening3Id();
-
 	String rekening4Id();
 
+	@Override
 	String rekening5Id();
 
+	@Override
 	String rekening6Id();
 
-	BigDecimal sebelum();
-
-	BigDecimal setelah();
-
 	@Override
-	LocalDateTime createdAt();
-
-	@Override
-	String createdBy();
-
-	@Override
-	LocalDateTime updatedAt();
-
-	@Override
-	String updatedBy();
-
-	@Override
-	boolean isDeleted();
-
-	@Override
-	LocalDateTime deletedAt();
-
-	@Override
-	String deletedBy();
-
-	DataMasterOrganisasi skpd();
-
-	DataMasterOrganisasi unit();
-
-	DataMasterUrusan urusan();
-
-	DataMasterBidang bidang();
-
-	DataMasterRekening1 rekening1();
-
-	DataMasterRekening2 rekening2();
-
-	DataMasterRekening3 rekening3();
-
 	DataMasterRekening4 rekening4();
 
+	@Override
 	DataMasterRekening5 rekening5();
 
+	@Override
 	DataMasterRekening6 rekening6();
 
 }

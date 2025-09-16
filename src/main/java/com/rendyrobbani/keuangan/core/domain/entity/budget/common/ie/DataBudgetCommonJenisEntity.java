@@ -1,72 +1,33 @@
 package com.rendyrobbani.keuangan.core.domain.entity.budget.common.ie;
 
-import com.rendyrobbani.keuangan.core.domain.entity.budget.common.DataBudgetCommonEntity;
-import com.rendyrobbani.keuangan.core.domain.entity.master.classification.bidang.DataMasterBidang;
-import com.rendyrobbani.keuangan.core.domain.entity.master.classification.organisasi.DataMasterOrganisasi;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening1.DataMasterRekening1;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening2.DataMasterRekening2;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening3.DataMasterRekening3;
-import com.rendyrobbani.keuangan.core.domain.entity.master.classification.urusan.DataMasterUrusan;
+import com.rendyrobbani.keuangan.core.domain.marker.master.classification.rekening.base.rekening1.ReferenceDataMasterRekening1;
+import com.rendyrobbani.keuangan.core.domain.marker.master.classification.rekening.base.rekening2.ReferenceDataMasterRekening2;
+import com.rendyrobbani.keuangan.core.domain.marker.master.classification.rekening.base.rekening3.ReferenceDataMasterRekening3;
 
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
-
-public interface DataBudgetCommonJenisEntity extends DataBudgetCommonEntity<String> {
+public interface DataBudgetCommonJenisEntity extends DataBudgetCommonBidangEntity,
+                                                     ReferenceDataMasterRekening1,
+                                                     ReferenceDataMasterRekening2,
+                                                     ReferenceDataMasterRekening3 {
 
 	@Override
-	String id();
-
-	String skpdId();
-
-	String unitId();
-
-	String urusanId();
-
-	String bidangId();
-
 	String rekening1Id();
 
+	@Override
 	String rekening2Id();
 
+	@Override
 	String rekening3Id();
 
-	BigDecimal sebelum();
-
-	BigDecimal setelah();
-
 	@Override
-	LocalDateTime createdAt();
-
-	@Override
-	String createdBy();
-
-	@Override
-	LocalDateTime updatedAt();
-
-	@Override
-	String updatedBy();
-
-	@Override
-	boolean isDeleted();
-
-	@Override
-	LocalDateTime deletedAt();
-
-	@Override
-	String deletedBy();
-
-	DataMasterOrganisasi skpd();
-
-	DataMasterOrganisasi unit();
-
-	DataMasterUrusan urusan();
-
-	DataMasterBidang bidang();
-
 	DataMasterRekening1 rekening1();
 
+	@Override
 	DataMasterRekening2 rekening2();
 
+	@Override
 	DataMasterRekening3 rekening3();
 
 }
