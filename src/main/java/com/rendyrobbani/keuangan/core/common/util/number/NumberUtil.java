@@ -3,6 +3,8 @@ package com.rendyrobbani.keuangan.core.common.util.number;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class NumberUtil {
 
@@ -28,6 +30,18 @@ public final class NumberUtil {
 
 	public static int fromRoman(String roman) {
 		return NumberUtilOfRoman.fromRoman(roman);
+	}
+
+	public static String format(BigDecimal number) {
+		return NumberUtilOfFormat.format(number);
+	}
+
+	public static String format(Long number) {
+		return NumberUtilOfFormat.format(number);
+	}
+
+	public static String format(Double number) {
+		return NumberUtilOfFormat.format(number);
 	}
 
 }
