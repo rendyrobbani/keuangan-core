@@ -1,14 +1,12 @@
-package com.rendyrobbani.keuangan.core.domain.entity.budget.common.ie.income.pendapatan.bidang;
+package com.rendyrobbani.keuangan.core.domain.entity.budget.common.ie.income.pendapatan.organisasi;
 
-import com.rendyrobbani.keuangan.core.domain.entity.budget.common.ie.DataBudgetCommonBidangEntity;
-import com.rendyrobbani.keuangan.core.domain.entity.master.classification.bidang.DataMasterBidang;
+import com.rendyrobbani.keuangan.core.domain.entity.budget.common.ie.DataBudgetCommonOrganisasiEntity;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.organisasi.DataMasterOrganisasi;
-import com.rendyrobbani.keuangan.core.domain.entity.master.classification.urusan.DataMasterUrusan;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public interface DataBudgetCommonIncomePendapatanBidangEntity extends DataBudgetCommonBidangEntity {
+public interface DataBudgetCommonIncomePendapatanOrganisasi extends DataBudgetCommonOrganisasiEntity {
 
 	@Override
 	String id();
@@ -18,12 +16,6 @@ public interface DataBudgetCommonIncomePendapatanBidangEntity extends DataBudget
 
 	@Override
 	String unitId();
-
-	@Override
-	String urusanId();
-
-	@Override
-	String bidangId();
 
 	@Override
 	BigDecimal sebelum();
@@ -57,11 +49,5 @@ public interface DataBudgetCommonIncomePendapatanBidangEntity extends DataBudget
 
 	@Override
 	DataMasterOrganisasi unit();
-
-	@Override
-	DataMasterUrusan urusan();
-
-	@Override
-	DataMasterBidang bidang();
 
 }

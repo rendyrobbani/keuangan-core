@@ -14,7 +14,7 @@ import com.rendyrobbani.keuangan.core.domain.entity.master.classification.urusan
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public interface DataBudgetCommonIncomePendapatanRekeningEntity extends DataBudgetCommonRekeningEntity {
+public interface DataBudgetCommonIncomePendapatanRekening extends DataBudgetCommonRekeningEntity {
 
 	@Override
 	String id();

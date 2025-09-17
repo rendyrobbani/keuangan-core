@@ -14,7 +14,7 @@ import com.rendyrobbani.keuangan.core.domain.entity.master.classification.urusan
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public interface DataBudgetCommonIncomePendapatanRincianEntity extends DataBudgetCommonRincianEntity {
+public interface DataBudgetCommonIncomePendapatanRincian extends DataBudgetCommonRincianEntity {
 
 	@Override
 	Long id();
