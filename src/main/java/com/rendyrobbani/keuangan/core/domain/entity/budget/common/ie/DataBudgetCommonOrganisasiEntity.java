@@ -11,8 +11,6 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public interface DataBudgetCommonOrganisasiEntity extends DataBudgetCommonEntity<String>,
-                                                          HasLock,
-                                                          HasLockMutator,
                                                           ReferenceSkpd,
                                                           ReferenceUnit {
 
@@ -38,15 +36,6 @@ public interface DataBudgetCommonOrganisasiEntity extends DataBudgetCommonEntity
 		BigDecimal setelah = this.setelah() != null ? this.setelah() : BigDecimal.ZERO;
 		return setelah.subtract(sebelum);
 	}
-
-	@Override
-	boolean isLocked();
-
-	@Override
-	LocalDateTime lockedAt();
-
-	@Override
-	String lockedBy();
 
 	@Override
 	LocalDateTime createdAt();
