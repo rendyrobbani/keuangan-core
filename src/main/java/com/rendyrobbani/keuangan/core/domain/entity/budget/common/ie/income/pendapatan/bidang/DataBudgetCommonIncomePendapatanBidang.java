@@ -4,15 +4,11 @@ import com.rendyrobbani.keuangan.core.domain.entity.budget.common.ie.DataBudgetC
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.bidang.DataMasterBidang;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.organisasi.DataMasterOrganisasi;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.urusan.DataMasterUrusan;
-import com.rendyrobbani.keuangan.core.domain.marker.audit.HasLock;
-import com.rendyrobbani.keuangan.core.domain.marker.audit.HasLockMutator;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public interface DataBudgetCommonIncomePendapatanBidang extends DataBudgetCommonBidangEntity,
-                                                                HasLock,
-                                                                HasLockMutator {
+public interface DataBudgetCommonIncomePendapatanBidang extends DataBudgetCommonBidangEntity {
 
 	String TABLE_NAME = "data_budget_common_income_pendapatan_bidang";
 
@@ -36,15 +32,6 @@ public interface DataBudgetCommonIncomePendapatanBidang extends DataBudgetCommon
 
 	@Override
 	BigDecimal total();
-
-	@Override
-	boolean isLocked();
-
-	@Override
-	LocalDateTime lockedAt();
-
-	@Override
-	String lockedBy();
 
 	@Override
 	LocalDateTime createdAt();
