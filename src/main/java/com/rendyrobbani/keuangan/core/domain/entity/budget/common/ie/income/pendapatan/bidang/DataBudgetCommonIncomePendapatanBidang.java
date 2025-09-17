@@ -10,6 +10,8 @@ import java.time.LocalDateTime;
 
 public interface DataBudgetCommonIncomePendapatanBidang extends DataBudgetCommonBidangEntity {
 
+	String TABLE_NAME = "data_budget_common_income_pendapatan_bidang";
+
 	@Override
 	String id();
 

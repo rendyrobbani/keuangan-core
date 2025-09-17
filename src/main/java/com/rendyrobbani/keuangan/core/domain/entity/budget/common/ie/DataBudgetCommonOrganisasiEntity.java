@@ -2,6 +2,8 @@ package com.rendyrobbani.keuangan.core.domain.entity.budget.common.ie;
 
 import com.rendyrobbani.keuangan.core.domain.entity.budget.common.DataBudgetCommonEntity;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.organisasi.DataMasterOrganisasi;
+import com.rendyrobbani.keuangan.core.domain.marker.audit.HasLock;
+import com.rendyrobbani.keuangan.core.domain.marker.audit.HasLockMutator;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.organisasi.ReferenceSkpd;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.organisasi.ReferenceUnit;
 
@@ -9,6 +11,8 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public interface DataBudgetCommonOrganisasiEntity extends DataBudgetCommonEntity<String>,
+                                                          HasLock,
+                                                          HasLockMutator,
                                                           ReferenceSkpd,
                                                           ReferenceUnit {
 
@@ -34,6 +38,15 @@ public interface DataBudgetCommonOrganisasiEntity extends DataBudgetCommonEntity
 		BigDecimal setelah = this.setelah() != null ? this.setelah() : BigDecimal.ZERO;
 		return setelah.subtract(sebelum);
 	}
+
+	@Override
+	boolean isLocked();
+
+	@Override
+	LocalDateTime lockedAt();
+
+	@Override
+	String lockedBy();
 
 	@Override
 	LocalDateTime createdAt();

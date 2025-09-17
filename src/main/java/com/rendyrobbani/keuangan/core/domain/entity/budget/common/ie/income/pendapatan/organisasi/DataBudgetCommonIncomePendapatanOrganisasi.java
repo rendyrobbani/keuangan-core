@@ -8,6 +8,8 @@ import java.time.LocalDateTime;
 
 public interface DataBudgetCommonIncomePendapatanOrganisasi extends DataBudgetCommonOrganisasiEntity {
 
+	String TABLE_NAME = "data_budget_common_income_pendapatan_organisasi";
+
 	@Override
 	String id();
 
