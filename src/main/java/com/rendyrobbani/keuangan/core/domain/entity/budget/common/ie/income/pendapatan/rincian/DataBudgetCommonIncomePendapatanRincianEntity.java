@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 public interface DataBudgetCommonIncomePendapatanRincianEntity extends DataBudgetCommonRincianEntity {
 
 	@Override
-	String id();
+	Long id();
 
 	@Override
 	String skpdId();
