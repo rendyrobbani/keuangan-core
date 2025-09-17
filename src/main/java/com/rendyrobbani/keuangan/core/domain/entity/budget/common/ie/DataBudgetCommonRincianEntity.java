@@ -43,47 +43,10 @@ public interface DataBudgetCommonRincianEntity extends DataBudgetCommonRekeningE
 		return KoefisienUtil.from(this.volume4(), this.satuan4());
 	}
 
-	default BigDecimal volume() {
-		BigDecimal volume = BigDecimal.ZERO;
-		if (this.volume1() != null && this.volume1().doubleValue() != 0) {
-			volume = this.volume1();
-			if (this.volume2() != null && this.volume2().doubleValue() != 0) {
-				volume = volume.multiply(this.volume2());
-				if (this.volume3() != null && this.volume3().doubleValue() != 0) {
-					volume = volume.multiply(this.volume3());
-					if (this.volume4() != null && this.volume4().doubleValue() != 0) {
-						volume = volume.multiply(this.volume4());
-					}
-				}
-			}
-		}
-		return volume;
-	}
+	BigDecimal volume();
 
-	default String satuan() {
-		ArrayList<String> satuan = new ArrayList<>();
-		if (this.satuan1() != null && !this.satuan1().isBlank()) {
-			satuan.add(this.satuan1());
-			if (this.satuan2() != null && !this.satuan2().isBlank()) {
-				satuan.add(this.satuan2());
-				if (this.satuan3() != null && !this.satuan3().isBlank()) {
-					satuan.add(this.satuan3());
-					if (this.satuan4() != null && !this.satuan4().isBlank()) {
-						satuan.add(this.satuan4());
-					}
-				}
-			}
-		}
-		return String.join(" ", satuan);
-	}
+	String satuan();
 
 	BigDecimal price();
-
-	default BigDecimal total() {
-		BigDecimal v = this.volume();
-		BigDecimal p = this.price();
-		if (v != null && p != null) return v.multiply(p);
-		return BigDecimal.ZERO;
-	}
 
 }

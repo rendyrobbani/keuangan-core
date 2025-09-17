@@ -21,7 +21,7 @@ public interface DataBudgetCommonIncomePendapatanOrganisasiEntity extends DataBu
 	BigDecimal sebelum();
 
 	@Override
-	BigDecimal setelah();
+	BigDecimal total();
 
 	@Override
 	LocalDateTime createdAt();

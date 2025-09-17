@@ -21,9 +21,19 @@ public interface DataBudgetCommonOrganisasiEntity extends DataBudgetCommonEntity
 	@Override
 	String unitId();
 
+	BigDecimal total();
+
 	BigDecimal sebelum();
 
-	BigDecimal setelah();
+	default BigDecimal setelah() {
+		return this.total();
+	}
+
+	default BigDecimal selisih() {
+		BigDecimal sebelum = this.sebelum() != null ? this.sebelum() : BigDecimal.ZERO;
+		BigDecimal setelah = this.setelah() != null ? this.setelah() : BigDecimal.ZERO;
+		return setelah.subtract(sebelum);
+	}
 
 	@Override
 	LocalDateTime createdAt();
