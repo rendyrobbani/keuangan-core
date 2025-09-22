@@ -2,19 +2,34 @@ package com.rendyrobbani.keuangan.core.domain.entity.budget.common.ie.expend.bel
 
 import com.rendyrobbani.keuangan.core.domain.entity.budget.common.ie.DataBudgetCommonRekeningEntity;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.bidang.DataMasterBidang;
+import com.rendyrobbani.keuangan.core.domain.entity.master.classification.fungsi.DataMasterFungsi;
+import com.rendyrobbani.keuangan.core.domain.entity.master.classification.kegiatan.DataMasterKegiatan;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.organisasi.DataMasterOrganisasi;
+import com.rendyrobbani.keuangan.core.domain.entity.master.classification.program.DataMasterProgram;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening1.DataMasterRekening1;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening2.DataMasterRekening2;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening3.DataMasterRekening3;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening4.DataMasterRekening4;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening5.DataMasterRekening5;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.rekening.base.rekening6.DataMasterRekening6;
+import com.rendyrobbani.keuangan.core.domain.entity.master.classification.subfungsi.DataMasterSubfungsi;
+import com.rendyrobbani.keuangan.core.domain.entity.master.classification.subkegiatan.DataMasterSubkegiatan;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.urusan.DataMasterUrusan;
+import com.rendyrobbani.keuangan.core.domain.marker.master.classification.fungsi.ReferenceDataMasterFungsi;
+import com.rendyrobbani.keuangan.core.domain.marker.master.classification.kegiatan.ReferenceDataMasterKegiatan;
+import com.rendyrobbani.keuangan.core.domain.marker.master.classification.program.ReferenceDataMasterProgram;
+import com.rendyrobbani.keuangan.core.domain.marker.master.classification.subfungsi.ReferenceDataMasterSubfungsi;
+import com.rendyrobbani.keuangan.core.domain.marker.master.classification.subkegiatan.ReferenceDataMasterSubkegiatan;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public interface DataBudgetCommonExpendBelanjaRekening extends DataBudgetCommonRekeningEntity {
+public interface DataBudgetCommonExpendBelanjaRekening extends DataBudgetCommonRekeningEntity,
+                                                               ReferenceDataMasterProgram,
+                                                               ReferenceDataMasterKegiatan,
+                                                               ReferenceDataMasterSubkegiatan,
+                                                               ReferenceDataMasterFungsi,
+                                                               ReferenceDataMasterSubfungsi {
 
 	String TABLE_NAME = "data_budget_common_expend_belanja_rekening";
 
@@ -32,6 +47,21 @@ public interface DataBudgetCommonExpendBelanjaRekening extends DataBudgetCommonR
 
 	@Override
 	String bidangId();
+
+	@Override
+	String programId();
+
+	@Override
+	String kegiatanId();
+
+	@Override
+	String subkegiatanId();
+
+	@Override
+	String fungsiId();
+
+	@Override
+	String subfungsiId();
 
 	@Override
 	String rekening1Id();
@@ -89,6 +119,21 @@ public interface DataBudgetCommonExpendBelanjaRekening extends DataBudgetCommonR
 
 	@Override
 	DataMasterBidang bidang();
+
+	@Override
+	DataMasterProgram program();
+
+	@Override
+	DataMasterKegiatan kegiatan();
+
+	@Override
+	DataMasterSubkegiatan subkegiatan();
+
+	@Override
+	DataMasterFungsi fungsi();
+
+	@Override
+	DataMasterSubfungsi subfungsi();
 
 	@Override
 	DataMasterRekening1 rekening1();
