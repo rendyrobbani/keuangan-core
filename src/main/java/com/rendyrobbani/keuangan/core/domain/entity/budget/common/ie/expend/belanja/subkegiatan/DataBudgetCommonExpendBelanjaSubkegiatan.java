@@ -68,9 +68,9 @@ public interface DataBudgetCommonExpendBelanjaSubkegiatan extends DataBudgetComm
 
 	boolean isRincianLocked();
 
-	LocalDateTime rincianlockedAt();
+	LocalDateTime rincianLockedAt();
 
-	String rincianlockedBy();
+	String rincianLockedBy();
 
 	@Override
 	LocalDateTime createdAt();
