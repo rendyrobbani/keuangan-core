@@ -55,17 +55,11 @@ public interface DataBudgetCommonExpendBelanjaRincian extends DataBudgetCommonRi
 	@Override
 	String programId();
 
-	String programCode();
-
 	@Override
 	String kegiatanId();
 
-	String kegiatanCode();
-
 	@Override
 	String subkegiatanId();
-
-	String subkegiatanCode();;
 
 	@Override
 	String fungsiId();

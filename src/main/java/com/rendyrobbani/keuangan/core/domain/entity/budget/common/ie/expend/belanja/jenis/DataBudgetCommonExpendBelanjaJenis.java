@@ -48,17 +48,11 @@ public interface DataBudgetCommonExpendBelanjaJenis extends DataBudgetCommonJeni
 	@Override
 	String programId();
 
-	String programCode();
-
 	@Override
 	String kegiatanId();
 
-	String kegiatanCode();
-
 	@Override
 	String subkegiatanId();
-
-	String subkegiatanCode();;
 
 	@Override
 	String fungsiId();
