@@ -152,4 +152,8 @@ public interface DataBudgetCommonExpendBelanjaSubkegiatan extends DataBudgetComm
 		return this.belanjaTransfer();
 	}
 
+	void lockRincian(LocalDateTime lockedAt, String lockedBy);
+
+	void unlockRincian(LocalDateTime unlockedAt, String unlockedBy);
+
 }
