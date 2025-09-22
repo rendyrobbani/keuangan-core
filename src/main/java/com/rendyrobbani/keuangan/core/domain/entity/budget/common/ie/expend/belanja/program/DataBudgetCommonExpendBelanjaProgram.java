@@ -31,6 +31,8 @@ public interface DataBudgetCommonExpendBelanjaProgram extends DataBudgetCommonPr
 	@Override
 	String programId();
 
+	String programCode();
+
 	@Override
 	BigDecimal sebelum();
 

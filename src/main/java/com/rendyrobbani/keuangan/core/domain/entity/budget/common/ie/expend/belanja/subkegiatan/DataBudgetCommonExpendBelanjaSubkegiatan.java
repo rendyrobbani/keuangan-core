@@ -39,11 +39,17 @@ public interface DataBudgetCommonExpendBelanjaSubkegiatan extends DataBudgetComm
 	@Override
 	String programId();
 
+	String programCode();
+
 	@Override
 	String kegiatanId();
 
+	String kegiatanCode();
+
 	@Override
 	String subkegiatanId();
+
+	String subkegiatanCode();;
 
 	@Override
 	String fungsiId();

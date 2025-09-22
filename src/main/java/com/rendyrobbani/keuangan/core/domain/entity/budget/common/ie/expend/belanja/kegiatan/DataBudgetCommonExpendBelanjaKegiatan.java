@@ -34,8 +34,12 @@ public interface DataBudgetCommonExpendBelanjaKegiatan extends DataBudgetCommonK
 	@Override
 	String programId();
 
+	String programCode();
+
 	@Override
 	String kegiatanId();
+
+	String kegiatanCode();
 
 	@Override
 	String fungsiId();
