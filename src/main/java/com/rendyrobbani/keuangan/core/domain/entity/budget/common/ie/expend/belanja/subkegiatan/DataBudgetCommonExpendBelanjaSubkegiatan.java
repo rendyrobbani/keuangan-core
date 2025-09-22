@@ -156,4 +156,6 @@ public interface DataBudgetCommonExpendBelanjaSubkegiatan extends DataBudgetComm
 
 	void unlockRincian(LocalDateTime unlockedAt, String unlockedBy);
 
+	void create(DataMasterOrganisasi unit, DataMasterBidang bidang, DataMasterSubkegiatan subkegiatan, LocalDateTime createdAt, String createdBy);
+
 }
