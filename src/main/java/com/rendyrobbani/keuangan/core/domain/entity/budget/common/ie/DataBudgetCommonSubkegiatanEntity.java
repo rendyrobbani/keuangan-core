@@ -1,5 +1,6 @@
 package com.rendyrobbani.keuangan.core.domain.entity.budget.common.ie;
 
+import com.rendyrobbani.keuangan.core.domain.entity.budget.common.DataBudgetCommonEntity;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.bidang.DataMasterBidang;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.fungsi.DataMasterFungsi;
 import com.rendyrobbani.keuangan.core.domain.entity.master.classification.kegiatan.DataMasterKegiatan;
@@ -15,7 +16,8 @@ import com.rendyrobbani.keuangan.core.domain.marker.master.classification.subfun
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.subkegiatan.ReferenceDataMasterSubkegiatan;
 import com.rendyrobbani.keuangan.core.domain.marker.master.classification.urusan.ReferenceDataMasterUrusan;
 
-public interface DataBudgetCommonSubkegiatanEntity extends DataBudgetCommonOrganisasiEntity,
+public interface DataBudgetCommonSubkegiatanEntity extends DataBudgetCommonEntity<String>,
+                                                           DataBudgetCommonOrganisasiEntity,
                                                            ReferenceDataMasterUrusan,
                                                            ReferenceDataMasterBidang,
                                                            ReferenceDataMasterProgram,
