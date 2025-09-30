@@ -1,14 +1,10 @@
 package com.rendyrobbani.keuangan.core.domain.entity.budget.common.ie.expend.belanja.subkegiatan;
 
 import com.rendyrobbani.keuangan.core.domain.entity.budget.common.ie.SipdBudgetCommonSubkegiatanEntity;
-import com.rendyrobbani.keuangan.core.domain.marker.audit.HasLock;
-import com.rendyrobbani.keuangan.core.domain.marker.audit.HasLockMutator;
 
 import java.time.LocalDateTime;
 
-public interface SipdBudgetCommonExpendBelanjaSubkegiatan extends SipdBudgetCommonSubkegiatanEntity<DataBudgetCommonExpendBelanjaSubkegiatan>,
-                                                                  HasLock,
-                                                                  HasLockMutator {
+public interface SipdBudgetCommonExpendBelanjaSubkegiatan extends SipdBudgetCommonSubkegiatanEntity<DataBudgetCommonExpendBelanjaSubkegiatan> {
 
 	String TABLE_NAME = "sipd_budget_common_expend_belanja_subkegiatan";
 
